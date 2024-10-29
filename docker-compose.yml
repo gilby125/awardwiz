@@ -2,14 +2,16 @@ version: '3.8'
 
 services:
   scrapers:
-    image: awardwiz:scrapers
+    build:
+      context: https://github.com/lg/awardwiz.git#main
+      dockerfile: Dockerfile.scrapers
     container_name: awardwiz-scrapers
     ports:
       - "2222:2222"
     volumes:
       - ./tmp:/usr/src/awardwiz/tmp
     environment:
-      - TZ=America/Chicago
+      - TZ=America/Los_Angeles
 
 networks:
   default:
