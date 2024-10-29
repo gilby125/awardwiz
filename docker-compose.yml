@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  scrapers:
+    image: awardwiz:scrapers
+    container_name: awardwiz-scrapers
+    ports:
+      - "2222:2222"
+    volumes:
+      - ./tmp:/usr/src/awardwiz/tmp
+    environment:
+      - TZ=America/Chicago
+
+networks:
+  default:
+    name: awardwiz
