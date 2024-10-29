@@ -9,8 +9,8 @@ services:
     volumes:
       - ./tmp:/usr/src/awardwiz/tmp
     environment:
-      - TZ=America/Los_Angeles
+      TZ: America/Los_Angeles
 
 networks:
   default:
-    name: awardwiz    name: awardwiz
+    name: awardwiz    name: awardwiz    name: awardwiz
