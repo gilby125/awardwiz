@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   scrapers:
-    build:
-      context: https://github.com/gilby125/awardwiz.git
-      dockerfile: Dockerfile.scrapers
+    build: .
     container_name: awardwiz-scrapers
     ports:
       - "2222:2222"
@@ -15,4 +13,4 @@ services:
 
 networks:
   default:
-    name: awardwiz
+    name: awardwiz    name: awardwiz
