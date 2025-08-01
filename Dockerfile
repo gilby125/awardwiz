@@ -8,3 +8,5 @@ RUN npm run build
 
 EXPOSE 2222
 CMD ["node", "dist/server.js"]
+
+RUN apt-get update && apt-get install -y just
